@@ -1,15 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from "./components/Header";
 import InputsWords from "./components/InputsWords";
 import {useState} from "react";
 import WordsList from "./components/ WordsList";
 import {useEffect} from "react";
+import EmptyLIst from "./components/EmptyLIst";
 
 const wordsArray = []
 
 function App() {
     const [words, setWords] = useState(wordsArray)
+
     useEffect(() => {
         // Update the document title using the browser API
         if(localStorage.getItem("data") !== null) {
@@ -39,7 +40,7 @@ function App() {
             <Header/>
             <main>
                 <InputsWords onAddWord={addWordHandler} />
-                <WordsList wordsList={words} onRemove={removeItemHandler}/>
+                {words.length>0 ? <WordsList wordsList={words} onRemove={removeItemHandler} /> : <EmptyLIst />}
             </main>
         </>
     );

@@ -6,6 +6,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 const WordsList = props => {
     return(
        <div className="container">
+           <h2 className={styles.title}>Your Dictionary</h2>
             <ul className={styles['list-wrapper']}>
                 {props.wordsList.map((el, num)=> {
                     const grabID = () => {
