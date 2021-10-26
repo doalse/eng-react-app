@@ -1,0 +1,28 @@
+.list-wrapper {
+    box-shadow: 0 0 10px #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    list-style-type: none;
+}
+
+.list-wrapper li {
+    padding: 10px 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+.list-wrapper li:last-child {
+    border-bottom: 0;
+}
+
+.button {
+    background: #f00 !important;
+    color: #fff !important;
+}
+
+.button:hover {
+    background: #a40a0a !important;
+}
